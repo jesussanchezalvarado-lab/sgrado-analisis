@@ -98,7 +98,7 @@
   <div style="max-width:900px;margin:0 auto">
     <p style="display:inline-block;background:#fff1c2;color:#8a6d1f;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">Antes de comenzar</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">¿Qué sabes ya sobre tabular y codificar?</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:28px;max-width:760px">Responde estas preguntas rápidas antes de avanzar al recurso.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:28px">Responde estas preguntas rápidas antes de avanzar al recurso.</p>
     <div style="display:flex;flex-direction:column;gap:18px">
       <sc-for list="{{ diagnosticoPreguntas }}" as="preg" hint-placeholder-count="3">
         <div style="background:#fff;border-radius:12px;padding:22px 24px;border:1px solid #f0dca0">
@@ -145,7 +145,7 @@
   <div style="max-width:1000px;margin:0 auto">
     <p style="display:inline-block;background:#eafbe6;color:#2f8b21;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">2 · Codificación</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">¿Cómo codificar tus respuestas?</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:28px;max-width:760px">Codificar es asignar un número a cada respuesta para poder tabularla. Estos son los tres casos más frecuentes.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:28px">Codificar es asignar un número a cada respuesta para poder tabularla. Estos son los tres casos más frecuentes.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
       <sc-for list="{{ codificacionCasos }}" as="caso" hint-placeholder-count="3">
         <div class="hover-card" style="background:#fff;border-radius:12px;border:1px solid #e2e6ea;overflow:hidden">
@@ -173,7 +173,11 @@
   <div style="max-width:1080px;margin:0 auto">
     <p style="display:inline-block;background:#f3e8f7;color:#9F26B4;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">3 · Ejemplo</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">Estructura de la base de datos</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:28px;max-width:760px">Así se ve una base de datos ya tabulada. Cada fila es un participante (E1, E2…) y cada columna una pregunta (P1, P2…). Los valores son los códigos.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:28px">Así se ve una base de datos ya tabulada. Cada fila es un participante y cada columna una pregunta (P1, P2…). Los valores son los códigos.</p>
+    <div style="display:flex;gap:10px;align-items:flex-start;background:#e9f2fb;border-radius:10px;padding:14px 16px;margin-bottom:24px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0055B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12" y2="8.01"></line><line x1="12" y1="11" x2="12" y2="16"></line></svg>
+      <p style="font-size:13.5px;line-height:1.5;color:#1a3a5c;margin:0">En la columna <strong>"Participante"</strong> escribe solo el número de cada persona (1, 2, 3…). No uses ningún código ni letra: eso podría confundirte al pasar los datos a Jamovi. Las letras "P" son solo para las preguntas (P1, P2…).</p>
+    </div>
 
     <h3 style="font-size:18px;margin-bottom:6px;color:#0055B7">Hoja "Perfil"</h3>
     <p style="font-size:13px;color:#55606b;margin-bottom:8px">P1 = Repitencia (1 Sí / 0 No) · P2 = Tiempo en el establecimiento (1: &lt;1 año, 2: 1-2, 3: 2-3, 4: +3) · P3 = Género (1 M / 2 F / 3 prefiero no decirlo)</p>
@@ -181,7 +185,7 @@
       <sc-raw-table class="example-table" style="width:100%;border-collapse:collapse;min-width:360px">
         <sc-raw-thead>
           <sc-raw-tr style="background:#0d1b2a">
-            <sc-raw-th style="text-align:left;padding:10px 14px;color:#fff;font:700 12px 'Open Sans',sans-serif">Informante</sc-raw-th>
+            <sc-raw-th style="width:90px;text-align:left;padding:10px 14px;color:#fff;font:700 12px 'Open Sans',sans-serif">Participante</sc-raw-th>
             <sc-raw-th style="padding:10px 14px;color:#fff;font:700 12px 'Open Sans',sans-serif">P1</sc-raw-th>
             <sc-raw-th style="padding:10px 14px;color:#fff;font:700 12px 'Open Sans',sans-serif">P2</sc-raw-th>
             <sc-raw-th style="padding:10px 14px;color:#fff;font:700 12px 'Open Sans',sans-serif">P3</sc-raw-th>
@@ -190,7 +194,7 @@
         <sc-raw-tbody>
           <sc-for list="{{ ejemploPerfil }}" as="row" hint-placeholder-count="10">
             <sc-raw-tr style="border-top:1px solid #eef1f4">
-              <sc-raw-td style="padding:9px 14px;font:700 13px 'Roboto Condensed',sans-serif;color:#0055B7">{{ row.inf }}</sc-raw-td>
+              <sc-raw-td style="width:90px;padding:9px 14px;font:700 13px 'Roboto Condensed',sans-serif;color:#0055B7">{{ row.inf }}</sc-raw-td>
               <sc-for list="{{ row.vals }}" as="v" hint-placeholder-count="3">
                 <sc-raw-td style="padding:9px 14px;text-align:center;font-size:13.5px;color:#1a232b">{{ v }}</sc-raw-td>
               </sc-for>
@@ -206,7 +210,7 @@
       <sc-raw-table class="example-table" style="width:100%;border-collapse:collapse;min-width:640px">
         <sc-raw-thead>
           <sc-raw-tr style="background:#0d1b2a">
-            <sc-raw-th style="text-align:left;padding:10px 14px;color:#fff;font:700 12px 'Open Sans',sans-serif">Informante</sc-raw-th>
+            <sc-raw-th style="width:90px;text-align:left;padding:10px 14px;color:#fff;font:700 12px 'Open Sans',sans-serif">Participante</sc-raw-th>
             <sc-for list="{{ preguntasCols }}" as="c" hint-placeholder-count="8">
               <sc-raw-th style="padding:10px 12px;color:#fff;font:700 12px 'Open Sans',sans-serif">{{ c }}</sc-raw-th>
             </sc-for>
@@ -215,7 +219,7 @@
         <sc-raw-tbody>
           <sc-for list="{{ ejemploPreguntas }}" as="row" hint-placeholder-count="10">
             <sc-raw-tr style="border-top:1px solid #eef1f4">
-              <sc-raw-td style="padding:9px 14px;font:700 13px 'Roboto Condensed',sans-serif;color:#3FAE29">{{ row.inf }}</sc-raw-td>
+              <sc-raw-td style="width:90px;padding:9px 14px;font:700 13px 'Roboto Condensed',sans-serif;color:#3FAE29">{{ row.inf }}</sc-raw-td>
               <sc-for list="{{ row.vals }}" as="v" hint-placeholder-count="8">
                 <sc-raw-td style="padding:9px 12px;text-align:center;font-size:13.5px;color:#1a232b">{{ v }}</sc-raw-td>
               </sc-for>
@@ -231,7 +235,7 @@
   <div style="max-width:980px;margin:0 auto">
     <p style="display:inline-block;background:#e9f2fb;color:#0055B7;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">4 · Guía práctica</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">Análisis en Jamovi</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:28px;max-width:700px">Sigue estos pasos en orden. Descarga Jamovi gratis desde <a href="https://www.jamovi.org/" target="_blank" rel="noopener">jamovi.org</a>.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:28px">Sigue estos pasos en orden. Descarga Jamovi gratis desde <a href="https://www.jamovi.org/" target="_blank" rel="noopener">jamovi.org</a>.</p>
     <div style="display:flex;flex-direction:column;gap:0">
       <sc-for list="{{ pasosJamovi }}" as="paso" hint-placeholder-count="4">
         <div>
@@ -277,13 +281,13 @@
   <div style="max-width:1180px;margin:0 auto">
     <p style="display:inline-block;background:#f3e8f7;color:#9F26B4;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">5 · Herramientas de entrega</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">Plantillas descargables</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:20px;max-width:760px">Completa cada tabla en la página. Se guarda automáticamente en este navegador. Descárgala para tener un respaldo.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:20px">Completa cada tabla en la página. Se guarda automáticamente en este navegador. Descárgala para tener un respaldo.</p>
     <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
       <sc-for list="{{ tablasTabs }}" as="tab" hint-placeholder-count="3">
         <button onClick="{{ tab.onClick }}" style="padding:10px 18px;border-radius:20px;font:700 13px 'Open Sans',sans-serif;cursor:pointer;background:{{ tab.bg }};color:{{ tab.color }};border:1.5px solid {{ tab.border }}">{{ tab.label }}</button>
       </sc-for>
     </div>
-    <p style="font-size:13.5px;line-height:1.55;color:#55606b;margin-bottom:16px;max-width:820px">{{ tablaActivaNota }}</p>
+    <p style="font-size:13.5px;line-height:1.55;color:#55606b;margin-bottom:16px">{{ tablaActivaNota }}</p>
     <div style="display:flex;gap:10px;margin-bottom:8px;flex-wrap:wrap">
       <button onClick="{{ saveToBrowser }}" style="background:#eafbe6;color:#2f8b21;border:1.5px solid #ACDA90;padding:11px 20px;border-radius:8px;font:700 13.5px 'Open Sans',sans-serif;cursor:pointer">Guardar en navegador</button>
       <button onClick="{{ downloadExcel }}" style="background:#0055B7;color:#fff;border:none;padding:11px 20px;border-radius:8px;font:700 13.5px 'Open Sans',sans-serif;cursor:pointer">Descargar Excel</button>
@@ -298,7 +302,7 @@
         <sc-raw-thead>
           <sc-raw-tr style="background:#0d1b2a">
             <sc-for list="{{ tablaColumnas }}" as="col" hint-placeholder-count="4">
-              <sc-raw-th style="text-align:left;padding:8px 10px;color:#fff;font:700 12px 'Open Sans',sans-serif"><div style="display:flex;align-items:center;gap:4px"><input value="{{ col.label }}" onInput="{{ col.onLabel }}" title="Renombrar columna" style="width:100%;min-width:56px;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.35);color:#fff;font:700 12px 'Open Sans',sans-serif;padding:3px 0;box-sizing:border-box"><button onClick="{{ col.onRemove }}" title="Eliminar columna" style="background:none;border:none;color:#8FC6E8;cursor:pointer;font-size:15px;line-height:1;flex:none">×</button></div></sc-raw-th>
+              <sc-raw-th style="text-align:left;padding:8px 10px;color:#fff;font:700 12px 'Open Sans',sans-serif;{{ col.colWidth }}"><div style="display:flex;align-items:center;gap:4px"><input value="{{ col.label }}" onInput="{{ col.onLabel }}" title="Renombrar columna" style="width:100%;min-width:56px;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.35);color:#fff;font:700 12px 'Open Sans',sans-serif;padding:3px 0;box-sizing:border-box"><button onClick="{{ col.onRemove }}" title="Eliminar columna" style="background:none;border:none;color:#8FC6E8;cursor:pointer;font-size:15px;line-height:1;flex:none">×</button></div></sc-raw-th>
             </sc-for>
             <sc-raw-th style="width:4%"></sc-raw-th>
           </sc-raw-tr>
@@ -307,7 +311,7 @@
           <sc-for list="{{ filasPlantilla }}" as="fila" hint-placeholder-count="10">
             <sc-raw-tr style="border-top:1px solid #e2e6ea;vertical-align:top">
               <sc-for list="{{ fila.celdas }}" as="celda" hint-placeholder-count="4">
-                <sc-raw-td style="padding:6px"><textarea onInput="{{ celda.onChange }}" value="{{ celda.value }}" placeholder="{{ celda.placeholder }}" style="width:100%;min-height:44px;border:1px solid #dfe4e8;border-radius:6px;padding:8px;font:13px 'Open Sans',sans-serif;resize:vertical;box-sizing:border-box"></textarea></sc-raw-td>
+                <sc-raw-td style="padding:6px;{{ celda.colWidth }}"><textarea onInput="{{ celda.onChange }}" value="{{ celda.value }}" placeholder="{{ celda.placeholder }}" style="width:100%;min-height:44px;border:1px solid #dfe4e8;border-radius:6px;padding:8px;font:13px 'Open Sans',sans-serif;resize:vertical;box-sizing:border-box"></textarea></sc-raw-td>
               </sc-for>
               <sc-raw-td style="padding:6px;text-align:center"><button onClick="{{ fila.onEliminar }}" title="Eliminar fila" style="background:none;border:none;color:#c0392b;font-size:18px;cursor:pointer">×</button></sc-raw-td>
             </sc-raw-tr>
@@ -463,11 +467,11 @@ class Component extends DCLogic {
     const cols = (arr) => arr.map(k => ({ key: k.toLowerCase().replace(/[^a-z0-9]/g, ''), label: k }));
     const emptyRows = (n, cfgCols, seed) => {
       const rows = [];
-      for (let i = 0; i < n; i++) { const r = { id: i + 1 }; cfgCols.forEach(c => r[c.key] = ''); if (seed) r[cfgCols[0].key] = 'E' + (i + 1); rows.push(r); }
+      for (let i = 0; i < n; i++) { const r = { id: i + 1 }; cfgCols.forEach(c => r[c.key] = ''); if (seed) r[cfgCols[0].key] = String(i + 1); rows.push(r); }
       return rows;
     };
-    const perfilCols = cols(['Informante', 'P1', 'P2', 'P3']);
-    const respCols = cols(['Informante', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8']);
+    const perfilCols = cols(['Participante', 'P1', 'P2', 'P3']);
+    const respCols = cols(['Participante', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8']);
     const sintCols = [
       { key: 'dimension', label: 'Dimensión' },
       { key: 'pmayor', label: 'P (mayor acuerdo)' }, { key: 'xmayor', label: 'X' }, { key: 'frmayor', label: 'Fr' },
@@ -476,15 +480,15 @@ class Component extends DCLogic {
     return {
       perfil: {
         label: 'Perfil', color: '#0055B7',
-        nota: 'Datos de perfil de cada informante (una fila por participante). Reemplaza P1, P2, P3 por tus variables y escribe el código correspondiente en cada celda.',
-        tituloApa: 'Datos de perfil de los informantes',
+        nota: 'Datos de perfil de cada participante (una fila por participante). Reemplaza P1, P2, P3 por tus variables y escribe el código correspondiente en cada celda. En "Participante" usa solo el número (1, 2, 3…), sin códigos ni letras.',
+        tituloApa: 'Datos de perfil de los participantes',
         notaApa: 'Agrega aquí información adicional, la fuente de los datos o el significado de las abreviaturas utilizadas.',
         columns: perfilCols, defaultRows: emptyRows(10, perfilCols, true),
       },
       preguntas: {
         label: 'Preguntas (Likert)', color: '#3FAE29',
-        nota: 'Respuestas Likert de cada informante. Cada columna es una pregunta (P1…P8) y cada valor su código (1 a 4). Agrega o quita filas según tu número de participantes.',
-        tituloApa: 'Respuestas a la escala Likert por informante',
+        nota: 'Respuestas Likert de cada participante. Cada columna es una pregunta (P1…P8) y cada valor su código (1 a 4). En "Participante" usa solo el número (1, 2, 3…). Agrega o quita filas según tu número de participantes.',
+        tituloApa: 'Respuestas a la escala Likert por participante',
         notaApa: 'Agrega aquí información adicional, la fuente de los datos o el significado de las abreviaturas utilizadas.',
         columns: respCols, defaultRows: emptyRows(10, respCols, true),
       },
@@ -509,7 +513,7 @@ class Component extends DCLogic {
     const nextId = Math.max(0, ...rows.map(r => r.id)) + 1;
     const cols = this.getCols(key);
     const empty = { id: nextId }; cols.forEach(c => empty[c.key] = '');
-    if (key !== 'sintesis') empty[cols[0].key] = 'E' + nextId;
+    if (key !== 'sintesis') empty[cols[0].key] = String(nextId);
     this.saveRows(key, [...rows, empty]);
   }
   removeRow(key, rowId) { this.saveRows(key, this.getRows(key).filter(r => r.id !== rowId)); }
@@ -639,9 +643,9 @@ ${this.buildWordTableHtml(key)}
 
     const preguntasCols = ['P1','P2','P3','P4','P5','P6','P7','P8'];
     const perfilData = [[1,4,1],[0,4,2],[0,3,1],[1,1,2],[0,2,3],[1,2,1],[0,4,1],[0,3,2],[1,2,2],[1,2,3]];
-    const ejemploPerfil = perfilData.map((vals,i)=>({ inf:'E'+(i+1), vals }));
+    const ejemploPerfil = perfilData.map((vals,i)=>({ inf:String(i+1), vals }));
     const preguntasData = [[4,4,1,1,3,3,2,1],[3,4,1,2,2,2,3,2],[4,2,1,1,3,3,2,3],[2,3,1,2,2,1,2,4],[3,4,2,2,2,3,2,3],[2,1,2,2,2,2,4,2],[1,2,2,1,1,2,4,1],[3,3,3,1,1,3,1,3],[4,4,4,3,1,2,1,2],[4,3,3,4,4,1,1,3]];
-    const ejemploPreguntas = preguntasData.map((vals,i)=>({ inf:'E'+(i+1), vals }));
+    const ejemploPreguntas = preguntasData.map((vals,i)=>({ inf:String(i+1), vals }));
 
     const pasosJamoviRaw = [
       ['Preparación del material', 'Cada grupo sube su base de datos en Excel a la carpeta Drive. Verifiquen la estructura: cada columna debe representar una dimensión o pregunta y cada fila un participante.', []],
@@ -666,9 +670,10 @@ ${this.buildWordTableHtml(key)}
       return { key, label: cfg.label, onClick: () => this.setState({ activeTable: key }),
         bg: active ? cfg.color : '#fff', color: active ? '#fff' : cfg.color, border: cfg.color };
     });
-    const tablaColumnas = activeCols.map(c => ({ label: c.label, onLabel: (e) => this.updateColLabel(activeKey, c.key, e.target.value), onRemove: () => this.removeColumn(activeKey, c.key) }));
+    const colWidth = (idx) => (activeKey !== 'sintesis' && idx === 0) ? 'width:90px;min-width:90px;' : '';
+    const tablaColumnas = activeCols.map((c, idx) => ({ label: c.label, onLabel: (e) => this.updateColLabel(activeKey, c.key, e.target.value), onRemove: () => this.removeColumn(activeKey, c.key), colWidth: colWidth(idx) }));
     const filasPlantilla = this.getRows(activeKey).map(r => ({
-      celdas: activeCols.map(c => ({ value: r[c.key], placeholder: c.placeholder || '', onChange: (e) => this.updateCell(activeKey, r.id, c.key, e.target.value) })),
+      celdas: activeCols.map((c, idx) => ({ value: r[c.key], placeholder: c.placeholder || '', onChange: (e) => this.updateCell(activeKey, r.id, c.key, e.target.value), colWidth: colWidth(idx) })),
       onEliminar: () => this.removeRow(activeKey, r.id),
     }));
 
