@@ -68,7 +68,7 @@
   <div style="max-width:900px;margin:0 auto">
     <p style="display:inline-block;background:#fff1c2;color:#8a6d1f;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">Antes de comenzar</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">¿Qué sabes ya sobre transcripción y codificación?</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:28px;max-width:760px">Responde estas preguntas rápidas antes de avanzar al recurso.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:28px">Responde estas preguntas rápidas antes de avanzar al recurso.</p>
     <div style="display:flex;flex-direction:column;gap:18px">
       <sc-for list="{{ diagnosticoPreguntas }}" as="preg" hint-placeholder-count="3">
         <div style="background:#fff;border-radius:12px;padding:22px 24px;border:1px solid #f0dca0">
@@ -111,7 +111,7 @@
   <div style="max-width:1080px;margin:0 auto">
     <p style="display:inline-block;background:#eafbe6;color:#2f8b21;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">2 · Comparación</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">Tipos de transcripción</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:28px;max-width:760px">El mismo fragmento, en los tres formatos. Para este recurso usaremos la <strong>transcripción literal limpia</strong>.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:28px">El mismo fragmento, en los tres formatos. Para este recurso usaremos la <strong>transcripción literal limpia</strong>.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
       <sc-for list="{{ tiposTranscripcion }}" as="tipo" hint-placeholder-count="3">
         <div class="hover-card" style="background:#fff;border-radius:12px;border:1.5px solid {{ tipo.borde }}">
@@ -179,7 +179,7 @@
   <div style="max-width:980px;margin:0 auto">
     <p style="display:inline-block;background:#eafbe6;color:#2f8b21;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">5 · Guía práctica</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">Codificación en Atlas.ti</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:28px;max-width:700px">Sigue estos pasos en orden en <a href="https://web.atlasti.com/" target="_blank" rel="noopener">web.atlasti.com</a>.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:28px">Sigue estos pasos en orden en <a href="https://web.atlasti.com/" target="_blank" rel="noopener">web.atlasti.com</a>.</p>
     <div style="display:flex;flex-direction:column;gap:0">
       <sc-for list="{{ pasosAtlas }}" as="paso" hint-placeholder-count="5">
         <div>
@@ -225,13 +225,13 @@
   <div style="max-width:1180px;margin:0 auto">
     <p style="display:inline-block;background:#f3e8f7;color:#9F26B4;font:700 12px 'Open Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;margin-bottom:18px">6 · Herramientas de entrega</p>
     <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:8px;color:#0d1b2a">Plantillas descargables de resultados</h2>
-    <p style="font-size:15px;color:#55606b;margin-bottom:20px;max-width:760px">Completa cada tabla directamente en la página. Se guarda automáticamente en este navegador. Descárgala para tener un respaldo.</p>
+    <p style="font-size:15px;color:#55606b;margin-bottom:20px">Completa cada tabla directamente en la página. Se guarda automáticamente en este navegador. Descárgala para tener un respaldo.</p>
     <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
       <sc-for list="{{ tablasTabs }}" as="tab" hint-placeholder-count="3">
         <button onClick="{{ tab.onClick }}" style="padding:10px 18px;border-radius:20px;font:700 13px 'Open Sans',sans-serif;cursor:pointer;background:{{ tab.bg }};color:{{ tab.color }};border:1.5px solid {{ tab.border }}">{{ tab.label }}</button>
       </sc-for>
     </div>
-    <p style="font-size:13.5px;line-height:1.55;color:#55606b;margin-bottom:16px;max-width:820px">{{ tablaActivaNota }}</p>
+    <p style="font-size:13.5px;line-height:1.55;color:#55606b;margin-bottom:16px">{{ tablaActivaNota }}</p>
     <div style="display:flex;gap:10px;margin-bottom:8px;flex-wrap:wrap">
       <button onClick="{{ saveToBrowser }}" style="background:#eafbe6;color:#2f8b21;border:1.5px solid #ACDA90;padding:11px 20px;border-radius:8px;font:700 13.5px 'Open Sans',sans-serif;cursor:pointer">Guardar en navegador</button>
       <button onClick="{{ downloadExcel }}" style="background:#0055B7;color:#fff;border:none;padding:11px 20px;border-radius:8px;font:700 13.5px 'Open Sans',sans-serif;cursor:pointer">Descargar Excel</button>
